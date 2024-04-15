@@ -21,9 +21,9 @@ export default function Home() {
               <h2
                 className={`${baloo.className} text-2xl xs:text-4xl sm:text-[36px] font-bold text-heading-color max-w-96`}
               >
-                100% Authentic Gir Kesar Mangoes
+                100% Authentic & <br /> Organic Gir Kesar Mangoes
               </h2>
-              <figure className="w-[150px] h-[75px] xs:w-[250px] xs:h-[150px]  relative">
+              <figure className="w-[150px] h-[75px] xs:w-[250px] xs:h-[150px] hidden relative">
                 <Image
                   src={"/images/stamp.svg"}
                   alt="Stamp"
@@ -49,7 +49,7 @@ export default function Home() {
               ))}
             </div>
             <Link
-              href={`https://web.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
+              href={`https://api.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
                 "મને વધુ માહિતી આપો."
               )}`}
               className="mt-8 px-8 py-4 text-xl text-white font-semibold rounded-full hover:shadow-xl bg-secondary-color w-full text-center"
@@ -142,7 +142,9 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col w-full bg-gray-100 py-6 container padding">
-        <h2 className={`w-full text-center text-2xl ${myFont.className}`}>
+        <h2
+          className={`w-full text-center text-heading-color text-2xl ${myFont.className}`}
+        >
           કસ્ટમર નો અભિપ્રાય
         </h2>
         <Testimonial />

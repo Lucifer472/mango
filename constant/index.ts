@@ -114,7 +114,7 @@ export const SocialMedia = [
   },
   {
     icon: FaWhatsapp,
-    link: `https://web.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
+    link: `https://api.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
       "મને વધુ માહિતી આપો."
     )}`,
   },

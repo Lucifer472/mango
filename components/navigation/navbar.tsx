@@ -22,7 +22,7 @@ const Navbar = () => {
               <HiShoppingCart className="text-secondary-color text-3xl" />
             </Link>
             <Link
-              href={`https://web.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
+              href={`https://api.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
                 "મને વધુ માહિતી આપો."
               )}`}
               className="px-4 py-2 rounded-md text-white bg-secondary-color font-semibold hover:shadow-md hover:underline"
