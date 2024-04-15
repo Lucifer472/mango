@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navigation/navbar";
+import WhatsAppLink from "@/components/views/wp-link";
+import Footer from "@/components/navigation/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`relative ${sans.className}`}>
+        <Navbar />
+        {children}
+        <Footer />
+        <WhatsAppLink />
+      </body>
     </html>
   );
 }
