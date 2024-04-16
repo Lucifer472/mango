@@ -21,6 +21,11 @@ export const DetailForm = () => {
     formData.append("grade", grade);
     formData.append("dozen", dozen.toString());
 
+    formData.append(
+      "amount",
+      grade === "A" ? (220 * dozen).toString() : (180 * dozen).toString()
+    );
+
     const sheetUrl =
       "https://script.google.com/macros/s/AKfycbwb1ceY78VCCMy3Cu4IEQ2kGc7hHqO4pJXlEVkP5LfSlnD_1sqJh89x1fv9PGmUfftOZQ/exec";
 

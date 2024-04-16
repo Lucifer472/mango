@@ -26,7 +26,7 @@ interface IDozens {
 }
 
 export const useDozenState = create<IDozens>((set) => ({
-  dozen: 1,
+  dozen: 10,
   setDozen: (v) => set({ dozen: v }),
 }));
 
