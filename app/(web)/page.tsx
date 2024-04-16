@@ -14,7 +14,7 @@ const myFont = localFont({
 export default function Home() {
   return (
     <main className="w-full flex flex-col">
-      <div className="relative w-full h-[600px] sm:h-[800px] bg-[url('/images/home-2.png')] mt-12 sm:bg-[url('/images/home-1.png')] bg-contain sm:bg-cover bg-top sm:bg-center bg-no-repeat home-before">
+      <div className="relative w-full h-[600px] sm:h-[800px] bg-[url('/images/home-2.png')] mt-12 md:mt-0 sm:bg-[url('/images/home-1.png')] bg-contain sm:bg-cover bg-top sm:bg-center bg-no-repeat home-before">
         <div className="h-full flex items-center justify-center container padding">
           <div className="flex flex-col items-start justify-center w-full">
             <div className="flex items-center justify-start border-b-2 mt-40 border-dotted border-heading-color">
@@ -33,9 +33,8 @@ export default function Home() {
               </figure>
             </div>
             <p className="text-main-color pt-4 font-semibold">
-              - Buy the world&apos;s best Gir Kesar mangoes. <br /> - Carbide &
-              Chemical Free, GUARANTEED! <br /> - From the farmers, by the
-              farmers!
+              - ખરીદો દુનિયાની સૌથી શ્રેષ્ઠ ગીર કેસર મેંગો. <br /> - કાર્બાઇડ
+              તેમજ કેમિકલ ફ્રી ગેરેન્ટેડ! <br /> - સીધા ખેડૂતો દ્વારા વેચાણ!
             </p>
             <div className="flex items-center justify-start sm:flex-wrap w-full overflow-x-auto overflow-y-hidden sm:overflow-hidden gap-4 pt-4">
               {InfoBox.map((i) => (
@@ -49,10 +48,8 @@ export default function Home() {
               ))}
             </div>
             <Link
-              href={`https://api.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
-                "મને વધુ માહિતી આપો."
-              )}`}
-              className="mt-8 px-8 py-4 text-xl text-white font-semibold rounded-full hover:shadow-xl bg-secondary-color w-full text-center"
+              href={`/order`}
+              className="mt-8 px-8 py-4 text-xl text-white font-semibold rounded-full hover:shadow-xl bg-secondary-color w-full md:max-w-[360px] text-center"
             >
               Order Kesar Mangoes Now! {`>`}
             </Link>

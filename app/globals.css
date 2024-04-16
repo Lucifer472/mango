@@ -64,4 +64,13 @@ body {
     top: -15px;
     left: 30px;
   }
+
+  .step-after::after {
+    content: "";
+    position: absolute;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid #391c01;
+    right: -12px;
+  }
 }

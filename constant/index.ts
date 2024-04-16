@@ -164,3 +164,5 @@ export const cities = [
   "Rajpipla",
   "Savarkundla",
 ];
+
+export const dozens = [5, 10, 20];

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-main-color w-full h-32 mt-6 flex flex-col items-center justify-center gap-y-6">
+    <footer className="bg-main-color w-full h-32 flex flex-col items-center justify-center gap-y-6">
       <div className="flex items-center justify-center gap-x-4">
         {SocialMedia.map((s, index) => (
           <Link href={s.link} key={index}>

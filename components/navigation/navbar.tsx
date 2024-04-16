@@ -18,13 +18,11 @@ const Navbar = () => {
             ))}
           </div>
           <div className="flex items-center justify-end gap-x-4">
-            <Link href={"https://wa.me/c/919974835353"} target="_blank">
+            <Link href={"/order"} target="_blank">
               <HiShoppingCart className="text-secondary-color text-3xl" />
             </Link>
             <Link
-              href={`https://api.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
-                "મને વધુ માહિતી આપો."
-              )}`}
+              href={"/order"}
               className="px-4 py-2 rounded-md text-white bg-secondary-color font-semibold hover:shadow-md hover:underline"
               target="_blank"
             >

@@ -3,7 +3,7 @@ import Link from "next/link";
 const WhatsAppLink = () => {
   return (
     <Link
-      href={`https://web.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
+      href={`https://api.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
         "મને વધુ માહિતી આપો."
       )}`}
       className="fixed bottom-4 right-4"
