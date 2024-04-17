@@ -76,7 +76,8 @@ export const SecondDetailForm = () => {
           <input
             name="number"
             type="text"
-            pattern="\d*"
+            pattern="[0-9]*"
+            inputMode="numeric"
             onKeyDown={handleKeyDown}
             maxLength={10}
             minLength={10}
@@ -128,8 +129,9 @@ export const SecondDetailForm = () => {
           </label>
           <input
             name="pincode"
+            pattern="[0-9]*"
+            inputMode="numeric"
             type="text"
-            pattern="\d*"
             onKeyDown={handleKeyDown}
             minLength={6}
             maxLength={6}
