@@ -1,13 +1,20 @@
 "use client";
 
 import { handleKeyDown } from "@/lib/utils";
-import { useDozenState, useGradeState, useOrderState } from "@/states";
+import {
+  useDozenState,
+  useGradeState,
+  useOrderState,
+  usePriceState,
+} from "@/states";
 
 export const SecondDetailForm = () => {
   const [setLoading, setMsg] = useOrderState((state) => [
     state.setLoading,
     state.setMsg,
   ]);
+
+  const price = usePriceState((state) => state.price);
 
   const grade = useGradeState((state) => state.grade);
   const dozen = useDozenState((state) => state.dozen);
@@ -21,10 +28,7 @@ export const SecondDetailForm = () => {
     formData.append("grade", "Ads");
     formData.append("dozen", "10");
 
-    formData.append(
-      "amount",
-      grade === "A" ? (220 * dozen).toString() : (180 * dozen).toString()
-    );
+    formData.append("amount", (price.a3 * 10).toString());
 
     const sheetUrl =
       "https://script.google.com/macros/s/AKfycbwb1ceY78VCCMy3Cu4IEQ2kGc7hHqO4pJXlEVkP5LfSlnD_1sqJh89x1fv9PGmUfftOZQ/exec";

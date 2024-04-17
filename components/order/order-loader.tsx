@@ -23,7 +23,11 @@ export const OrderLoader = () => {
     setMsg(null);
 
     if (redirect) {
-      router.push("/");
+      router.push(
+        `https://api.whatsapp.com/send?phone=+919974835353&text=${encodeURIComponent(
+          "મેં કેસર કેરીનો ઓર્ડર કરેલો છે તો ઓર્ડર મોકલી આપવા વિનંતી."
+        )}`
+      );
     }
   };
 
