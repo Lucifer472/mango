@@ -11,7 +11,7 @@ const Order2Page = () => {
       <OrderSlider />
       <div className="container padding flex flex-col">
         <h2 className="text-2xl font-semibold w-full text-center mt-4">
-          જામવાળા ગીરની પ્રખ્યાત કેસર કેરી - સીધું ખેડૂતો દ્વારા વેચાણ
+          જામવાળા ગીરની પ્રખ્યાત કેસર કેરી <br /> સીધું ખેડૂતો દ્વારા વેચાણ
         </h2>
         <CashDeliveryAnimation />
         <SecondDetailForm />
