@@ -1,20 +1,14 @@
 "use client";
 
 import { handleKeyDown } from "@/lib/utils";
-import {
-  useDozenState,
-  useGradeState,
-  useOrderState,
-  usePriceState,
-} from "@/states";
+import { useDozenState, useGradeState, useOrderState } from "@/states";
 
-export const DetailForm = () => {
+export const SecondDetailForm = () => {
   const [setLoading, setMsg] = useOrderState((state) => [
     state.setLoading,
     state.setMsg,
   ]);
 
-  const price = usePriceState((state) => state.price);
   const grade = useGradeState((state) => state.grade);
   const dozen = useDozenState((state) => state.dozen);
 
@@ -24,8 +18,8 @@ export const DetailForm = () => {
 
     const formData = new FormData(e.currentTarget);
 
-    formData.append("grade", grade);
-    formData.append("dozen", dozen.toString());
+    formData.append("grade", "Ads");
+    formData.append("dozen", "10");
 
     formData.append(
       "amount",
@@ -59,15 +53,10 @@ export const DetailForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full space-y-4 mt-4">
-      <div className="flex items-center justify-start">
-        <span className="pl-[6px] mr-[18px] h-[24px] pr-[2px] bg-[#391c01] flex items-center justify-center italic text-white text-[12px] relative step-after">
-          STEP 3
-        </span>
-        <p className="italic text-[#391c01] font-bold text-sm">
-          Fill in Details:
-        </p>
-      </div>
+    <form
+      onSubmit={handleSubmit}
+      className="w-full space-y-6 mt-6 py-8 border border-black rounded-md px-6"
+    >
       <div className="flex flex-col w-full gap-y-4">
         <div className="flex flex-col w-full gap-y-1">
           <label className="italic text-sm text-main-color font-semibold">
@@ -76,23 +65,22 @@ export const DetailForm = () => {
           <input
             name="name"
             type="text"
-            className="w-full py-2 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
-            placeholder="Your Name..."
+            className="w-full py-3 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
             required
           />
         </div>
         <div className="flex flex-col w-full gap-y-1">
           <label className="italic text-sm text-main-color font-semibold">
-            Number:
+            Mobile Number:
           </label>
           <input
             name="number"
             type="text"
+            pattern="\d*"
             onKeyDown={handleKeyDown}
             maxLength={10}
             minLength={10}
-            className="w-full py-2 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
-            placeholder="Your Phone Number..."
+            className="w-full py-3 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
             required
           />
         </div>
@@ -103,8 +91,7 @@ export const DetailForm = () => {
           <input
             name="apt"
             type="text"
-            className="w-full py-2 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
-            placeholder="Apartment Number/House Number..."
+            className="w-full py-3 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
             required
           />
         </div>
@@ -115,32 +102,25 @@ export const DetailForm = () => {
           <input
             name="street"
             type="text"
-            className="w-full py-2 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
-            placeholder="Street Name..."
+            className="w-full py-3 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
             required
-          />
-        </div>
-        <div className="flex flex-col w-full gap-y-1">
-          <label className="italic text-sm text-main-color font-semibold">
-            Landmark (if any):
-          </label>
-          <input
-            name="landmark"
-            type="text"
-            className="w-full py-2 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
-            placeholder="Landmark..."
           />
         </div>
         <div className="flex flex-col w-full gap-y-1">
           <label className="italic text-sm text-main-color font-semibold">
             City:
           </label>
-          <input
+          <select
             name="city"
-            type="text"
-            className="w-full py-2 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
-            placeholder="Name of City..."
-          />
+            defaultValue={"gandhinagar"}
+            className="w-full py-3 px-4 border border-gray-700 rounded-md bg-white focus:border-secondary-color outline-none"
+          >
+            <option value="gandhinagar">Gandhinagar</option>
+            <option value="ahmadabad">Ahmadabad</option>
+            <option value="rajkot">Rajkot</option>
+            <option value="surat">Surat</option>
+            <option value="vadodara">Vadodara</option>
+          </select>
         </div>
         <div className="flex flex-col w-full gap-y-1">
           <label className="italic text-sm text-main-color font-semibold">
@@ -149,24 +129,18 @@ export const DetailForm = () => {
           <input
             name="pincode"
             type="text"
+            pattern="\d*"
             onKeyDown={handleKeyDown}
-            maxLength={6}
             minLength={6}
-            className="w-full py-2 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
-            placeholder="Pincode..."
+            maxLength={6}
+            required
+            className="w-full py-3 px-4 border border-gray-700 rounded-md focus:border-secondary-color outline-none"
           />
         </div>
       </div>
-      <div className="flex items-center justify-between py-4 px-2 bg-white border border-slate-500 rounded-md">
-        <span>Total Order Value:</span>
-        <span>
-          {dozen} x ₹{grade === "A" ? price.a1 : price.a2} : ₹
-          {grade === "A" ? price.a1 * dozen : price.a2 * dozen}
-        </span>
-      </div>
       <button
         type="submit"
-        className="w-full bg-secondary-color text-center py-4 text-white font-medium rounded-md"
+        className="w-full bg-green-800 text-center py-4 text-white font-medium rounded-md animate-pulse"
       >
         Confirm Order
       </button>

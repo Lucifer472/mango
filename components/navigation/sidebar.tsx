@@ -4,12 +4,20 @@ import { useSidebarState } from "@/states";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { SidebarLinks } from "./nav-links";
 import { NavLinks } from "@/constant";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 export const Sidebar = () => {
+  const pathname = usePathname();
+
   const [open, setOpen] = useSidebarState((state) => [
     state.open,
     state.setOpen,
   ]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname, setOpen]);
 
   return (
     <aside
@@ -21,7 +29,7 @@ export const Sidebar = () => {
       <div className="w-full h-full relative">
         <button
           className="absolute top-0 right-0 p-2 bg-white rounded-full m-2"
-          onClick={setOpen}
+          onClick={() => setOpen(false)}
         >
           <IoCloseCircleOutline className="text-black text-xl" />
         </button>

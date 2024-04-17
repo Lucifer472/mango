@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navigation/navbar";
-import WhatsAppLink from "@/components/views/wp-link";
-import Footer from "@/components/navigation/footer";
+import { InitialPrice } from "@/components/intial-price";
 
 const sans = Open_Sans({ subsets: ["latin"] });
 
@@ -20,10 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`relative ${sans.className}`}>
-        <Navbar />
+        <InitialPrice />
         {children}
-        <Footer />
-        <WhatsAppLink />
       </body>
     </html>
   );

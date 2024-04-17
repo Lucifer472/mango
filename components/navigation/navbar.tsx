@@ -9,8 +9,8 @@ import { Sidebar } from "./sidebar";
 const Navbar = () => {
   return (
     <header className="w-full relative">
-      <div className="fixed top-0 left-0 h-12 bg-white shadow w-full z-50">
-        <nav className="container padding h-12 flex items-center justify-between">
+      <div className="fixed top-0 left-0 h-12 sm:h-16 bg-white shadow w-full z-50">
+        <nav className="container padding h-12 sm:h-16 flex items-center justify-between">
           <NavbarButton />
           <div className="hidden md:flex items-center justify-start gap-x-4 h-20">
             {NavLinks.map((l) => (
@@ -18,13 +18,12 @@ const Navbar = () => {
             ))}
           </div>
           <div className="flex items-center justify-end gap-x-4">
-            <Link href={"/order"} target="_blank">
+            <Link href={"/order"}>
               <HiShoppingCart className="text-secondary-color text-3xl" />
             </Link>
             <Link
               href={"/order"}
               className="px-4 py-2 rounded-md text-white bg-secondary-color font-semibold hover:shadow-md hover:underline"
-              target="_blank"
             >
               Order Mangoes!
             </Link>

@@ -19,7 +19,7 @@ export const SelectDozen = () => {
           Select Quantity (In Kg):
         </p>
       </div>
-      <div className="overflow-x-scroll overflow-y-hidden w-full mt-4">
+      <div className="w-full mt-4">
         <div className="w-full flex items-start gap-x-4">
           {dozens.map((d) => (
             <button

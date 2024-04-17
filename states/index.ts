@@ -2,12 +2,12 @@ import { create } from "zustand";
 
 interface ISidebar {
   open: boolean;
-  setOpen: () => void;
+  setOpen: (v: boolean) => void;
 }
 
 export const useSidebarState = create<ISidebar>((set) => ({
   open: false,
-  setOpen: () => set((state) => ({ open: !state.open })),
+  setOpen: (v) => set({ open: v }),
 }));
 
 interface IGrade {
@@ -42,4 +42,14 @@ export const useOrderState = create<IOrder>((set) => ({
   setMsg: (v) => set({ msg: v }),
   loading: false,
   setLoading: () => set((state) => ({ loading: !state.loading })),
+}));
+
+interface IPrice {
+  price: { a1: number; a2: number; a3: number };
+  setPrice: (v: { a1: number; a2: number; a3: number }) => void;
+}
+
+export const usePriceState = create<IPrice>((set) => ({
+  price: { a1: 220, a2: 180, a3: 180 },
+  setPrice: (v) => set({ price: v }),
 }));

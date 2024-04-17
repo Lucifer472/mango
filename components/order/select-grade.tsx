@@ -1,9 +1,11 @@
 "use client";
 
-import { useGradeState } from "@/states";
+import { useGradeState, usePriceState } from "@/states";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 export const SelectGrade = () => {
+  const price = usePriceState((state) => state.price);
+
   const [grade, setGrade] = useGradeState((state) => [
     state.grade,
     state.setGrade,
@@ -24,7 +26,7 @@ export const SelectGrade = () => {
           More Details
         </button>
       </div>
-      <div className="overflow-x-scroll overflow-y-hidden w-full mt-4">
+      <div className="w-full mt-4">
         <div className="w-full flex items-start gap-x-4">
           <button
             className={`flex items-center flex-col justify-between px-6 py-4 bg-white border rounded-md min-w-[150px] relative ${
@@ -41,7 +43,7 @@ export const SelectGrade = () => {
             <HiOutlineDotsHorizontal className="text-secondary-color text-2xl w-full text-center" />
             <div className="flex flex-col items-center justify-center w-full">
               <p>
-                ₹ 220
+                ₹ {price.a1}
                 <span className="text-xs italic text-main-color">/Kg</span>
               </p>
               <span className="text-[12px] text-secondary-color">
@@ -64,7 +66,7 @@ export const SelectGrade = () => {
             <HiOutlineDotsHorizontal className="text-secondary-color text-2xl w-full text-center" />
             <div className="flex flex-col items-center justify-center w-full">
               <p>
-                ₹ 180
+                ₹ {price.a2}
                 <span className="text-xs italic text-main-color">/Kg</span>
               </p>
               <span className="text-[12px] text-secondary-color">

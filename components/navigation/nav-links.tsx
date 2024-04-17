@@ -1,9 +1,9 @@
 "use client";
 
 import { useSidebarState } from "@/states";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BiMenu } from "react-icons/bi";
+import Link from "next/link";
 
 export const NavbarLinks = ({
   link,
@@ -14,7 +14,7 @@ export const NavbarLinks = ({
 }) => {
   const pathname = usePathname();
 
-  const active = pathname.startsWith(link);
+  const active = pathname === link;
 
   return (
     <Link
@@ -37,13 +37,13 @@ export const SidebarLinks = ({
 }) => {
   const pathname = usePathname();
 
-  const active = pathname.startsWith(link);
+  const active = pathname === link;
 
   return (
     <Link
       href={link}
-      className={`text-black font-semibold hover:hover-shadow-sidebar w-full py-4 bg-gray-500 bg-opacity-10 ${
-        active && "hover-shadow-sidebar"
+      className={`text-black font-semibold hover:hover-shadow-sidebar w-full py-4 hover:bg-black hover:bg-opacity-5 bg-opacity-5  ${
+        active && "hover-shadow-sidebar bg-black"
       } transition-all duration-500 px-8`}
     >
       {label}
@@ -57,7 +57,7 @@ export const NavbarButton = () => {
   return (
     <div
       className="flex items-center justify-start md:hidden"
-      onClick={setOpen}
+      onClick={() => setOpen(true)}
     >
       <BiMenu className="text-4xl text-secondary-color cursor-pointer" />
     </div>
