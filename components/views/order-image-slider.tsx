@@ -58,13 +58,13 @@ export const OrderSlider = () => {
           <BsArrowRight className="text-white font-bold text-lg" />
         </button>
       </div>
-      <div className="absolute top-[90%] left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="flex md:hidden items-center justify-center gap-x-4 w-full mt-6">
+      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="flex items-center justify-center gap-x-4 w-full mt-6">
           {slider.map((_t, number) => (
             <button key={number} onClick={() => setIndex(number)}>
               <span
                 className={`w-2 h-2 block rounded-full transition-all duration-500 ${
-                  index === number ? "bg-secondary-color" : "bg-black"
+                  index === number ? "bg-secondary-color" : "bg-white"
                 }`}
               ></span>
             </button>

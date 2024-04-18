@@ -74,6 +74,11 @@ body {
     right: -12px;
   }
 
+  .svgWidthAndHeight {
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+  }
+
   @keyframes elementor-headline-dash {
     0% {
       stroke-dasharray: 0 1500;
@@ -84,5 +89,15 @@ body {
       stroke-dasharray: 1500 1500;
       opacity: 1;
     }
+  }
+
+  .about-step-before::before {
+    content: "";
+    position: absolute;
+    height: 95%;
+    top: 5px;
+    width: 2px;
+    background-color: #fcb301;
+    left: 19px;
   }
 }

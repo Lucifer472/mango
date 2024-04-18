@@ -20,7 +20,7 @@ const config: Config = {
         "heading-color": "#62AA00",
       },
       screens: {
-        xx: "440px",
+        xx: "400px",
         xs: "540px",
       },
     },

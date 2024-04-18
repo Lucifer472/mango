@@ -22,7 +22,7 @@ const ImageSlider = () => {
       >
         {slider.map((s) => (
           <div
-            className="bg-center bg-contain bg-no-repeat flex-shrink-0 basis-full w-full min-h-[180px]"
+            className="bg-center bg-contain bg-no-repeat flex-shrink-0 basis-full w-full min-h-[140px] xx:min-h-[180px]  xs:min-h-[240px] sm:min-h-[300px] md:min-h-[350px]"
             style={{
               backgroundImage: `url('${s}')`,
             }}
@@ -30,7 +30,7 @@ const ImageSlider = () => {
           ></div>
         ))}
       </div>
-      <div className="flex md:hidden items-center justify-center gap-x-4 w-full mt-6">
+      <div className="flex items-center justify-center gap-x-4 w-full mt-2">
         {slider.map((_t, index) => (
           <button key={index} onClick={() => setI(index)}>
             <span
