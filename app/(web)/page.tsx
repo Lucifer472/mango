@@ -63,9 +63,13 @@ export default function Home() {
           >
             Why Gir Kesar Mango?
           </h2>
-          <p className="text-justify hidden sm:block">{`
-          Gir Kesar, a small village in Maharashtra state produces the world’s best Alphonso mango. However, the traders in the market cheat customers by selling inferior mangoes from other regions by labelling them as Gir Kesar Hapus. Gir Kesar Mango is a project by Gir Kesar Taluka Mango Grower’s Co-operative Society Limited, to give you the best original Gir Kesar Mango (Gir Kesar Hapus) directly from our farms in Gir Kesar. Buy from Gir Kesar Mango and get the best fruit home-delivered, with a guarantee of our trust.
-          `}</p>
+          <p className="text-justify hidden sm:block">
+            કેસર કેરી ને કેરી ઓ ની રાણી પણ કેવા માં આવે છે તેનો સ્વાદ એટલો અદભૂત
+            છે કે તેને કોઇ ના ના પાડી શકે. તેમની તાજગી, રંગ અને સ્વાસ્થ્ય ના
+            ફાયદા તેમણે લાખો માં એક બનાવે છે જેથી એક વાર તો તેનો ટેસ્ટ કરવો જ
+            જોઈએ. કેસર કેરી તેની ઉત્તમ ગુણવત્તા, સ્વાદ, સુંદરતા અને કેસરિયા રંગ
+            માટે જાણીતી છે.
+          </p>
           <div className="flex flex-wrap items-center justify-evenly gap-4 w-full sm:mt-12">
             {InfoSvg.map((i, index) => (
               <div

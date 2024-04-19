@@ -37,53 +37,37 @@ const AboutPage = () => {
               </Link>
             </div>
             <p className="text-sm sm:text-base text-justify leading-[1.7] text-main-color px-2">
-              The Alphonso mango is a foreign fruit that came to India through
-              Goa along with Alfonso De Albuquerque, the Portuguese explorer and
-              military strategist who led many Portuguese invasions in the
-              1600s. From Goa, the Alphonso mango traveled to different places
-              like Ratnagiri, other Konkan region and southern side of India as
-              well.
+              Gir Kesar mango is a variety of mango that originated in the Gir
+              region of Gujarat, a state in western India. The mango is named
+              after the Gir forest, which is the only natural habitat of the
+              Asiatic lion and is located in the Junagadh district of Gujarat.
             </p>
             <p className="text-sm sm:text-base text-justify leading-[1.7] text-main-color px-2">
-              The Devgad Alphonso gained distinctiveness and favorable
-              characteristics like the pleasant fruity smell, no fiber,
-              extremely aromatic and sweet taste, becoming popular among buyers.
-              The distinctiveness comes from the geographical conditions of
-              Devgad as the same is not observed in other varieties grown
-              elsewhere.
+              The history of Gir Kesar mango can be traced back to the early
+              1930s when Wazir Saleh Mohammad from Vanthali, Gujarat discovered
+              a seedling that produced a unique variety of mangoes with a sweet
+              aroma and bright orange color. He named the mango Kesar, which
+              means saffron in Hindi, due to its intense aroma and color.
             </p>
             <p className="text-sm sm:text-base text-justify leading-[1.7] text-main-color px-2">
-              In the early 90’s, growers brought grafts from Ratnagiri to Devgad
-              for experimentation. As Devgad is majorly hard laterite rock below
-              (termed as jambha dagad locally), it was difficult to plant the
-              grafts. Growers uprooted existing trees of other species that had
-              grown in cracks on the laterite rock and planted Alphonso grafts
-              in its place. The planted grafts survived and produced Alphonso
-              mangoes that tasted very different from mangoes of the Ratnagiri
-              region. This was attributed to the typical weather conditions and
-              soil characteristics in the geographical region of Devgad. Between
-              1920 and 1930 Devgad Mango Growers engaged in marketing efforts,
-              by sending their Alphonso mangoes via passenger boats to Mumbai.
-              Mumbaikars recognized the unique taste of Devgad, along with its
-              sweet taste, thick pulp, and extremely pleasant fruity flavor, and
-              the fruit became popular.
+              Over time, the Gir Kesar mango gained popularity among farmers and
+              consumers due to its unique flavor and texture. In 2011, the
+              Government of India granted the Geographical Indication (GI) tag
+              to the Gir Kesar mango, recognizing its unique qualities and
+              characteristics that are directly linked to its geographical
+              origin in the Gir region of Gujarat.
             </p>
             <p className="text-sm sm:text-base text-justify leading-[1.7] text-main-color px-2">
-              The fruit from Devgad came to be popularly known as Devgad Hapus
-              in Mumbai and fetched premium prices due to its growing demand and
-              popularity. It was at this time that Devgad Alphonso started
-              gaining consumer goodwill to become a brand name thereby acquiring
-              commercial importance. It was apparent from the growing demand and
-              popularity of Devgad Alphonso that the distinctiveness of Devgad
-              Alphonso was a result of the typical climatic conditions and soil
-              characteristics of Devgad region which are different than even
-              nearby regions like Ratnagiri.
+              Today, Gir Kesar mangoes are considered one of the most premium
+              and sought-after varieties of mango in India and around the world,
+              and are enjoyed for their sweet, aromatic flavor and smooth
+              texture.
             </p>
           </div>
           <div className="col-span-1 flex flex-col gap-y-4 w-full my-6 lg:my-0">
             <div className="flex flex-col gap-y-4 w-full p-6 bg-slate-50 rounded-md shadow-md">
               <h2 className="text-main-color font-bold px-2 text-base xs:text-lg md:text-xl ">
-                Order Devgad Mangoes with 3 easy steps
+                Order Gir Kesar Mangoes with 3 easy steps
               </h2>
               <div className="flex flex-col items-start relative w-full gap-y-4 about-step-before">
                 <p className="flex items-center justify-start gap-x-2 z-10 relative">
@@ -119,16 +103,6 @@ const AboutPage = () => {
                   Order Mangoes
                 </Link>
               </div>
-            </div>
-            <div className="p-2 relative w-full min-h-[600px] border border-black rounded-md shadow-md">
-              <Image
-                src={"/images/about/makes.png"}
-                alt="Makes"
-                fill
-                style={{
-                  objectFit: "contain",
-                }}
-              />
             </div>
           </div>
         </div>
